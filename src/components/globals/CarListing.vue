@@ -20,8 +20,6 @@ async function deleteCar() {
 
     if (!wantsToDelete) { return }
 
-    console.log('car id', props.carProp.id);
-
     await carsService.deleteCar(props.carProp.id)
   } catch (error) {
     Pop.meow(error)
