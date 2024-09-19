@@ -5,6 +5,7 @@ function loadPage(page) {
   return () => import(`./pages/${page}.vue`);
 }
 
+// NOTE Set routes
 const routes = [
   {
     path: "/",
@@ -20,6 +21,11 @@ const routes = [
     path: "/houses",
     name: "Houses",
     component: loadPage("HousesPage"),
+  },
+  {
+    path: "/jobs",
+    name: "Jobs",
+    component: loadPage("JobsPage"),
   },
   {
     path: "/account",
